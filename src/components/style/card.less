@@ -1,0 +1,267 @@
+//表格
+.card {
+    background: #FFF;
+    margin: 0 12px 24px 12px;
+    border-radius: 0 0 5px 5px;
+    // box-shadow: 0 1px #CAD1DA;
+}
+//由于文本较长，采用左对齐方式
+.cardTable {
+    tr {
+        th {
+            &:nth-child(1) {
+                text-align: left;
+                padding-left: 16px;
+            }
+            &:nth-child(2) {
+                text-align: left;
+            }
+        }
+        td {
+            &:nth-child(1) {
+                text-align: left;
+                padding-left: 16px;
+            }
+            &:nth-child(2) {
+                text-align: left;
+            }
+        }
+    }
+}
+.vehCarTable {
+    tr {
+        td {
+            &:nth-child(2) {
+                text-align: left;
+            }
+            &:nth-child(3) {
+                text-align: left;
+            }
+            &:nth-child(7) {
+                text-align: right;
+                padding-right:10px;
+            }
+            &:nth-child(10) {
+                text-align: right;
+                padding-right:10px;
+            }
+        }
+    }
+}
+.vehTableDifferent {
+    tr {
+        td {
+            &:nth-child(2) {
+                text-align: left;
+            }
+            &:nth-child(3) {
+                text-align: left;
+            }
+        }
+    }
+}
+.vehDefinitionTable {
+    tr {
+        td {
+            &:nth-child(2) {
+                text-align: left;
+            }
+            &:nth-child(4) {
+                text-align: right;
+            }
+            &:nth-child(5) {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.vehRepassTable{
+    tr{
+        td{
+            &:nth-child(2){
+                text-align: left;
+            }
+            &:nth-child(4){
+                text-align: right;
+                padding-right:10px;
+            }
+            &:nth-child(5){
+                text-align: right;
+                padding-right:10px;
+            }
+        }
+    }
+}
+
+.vehChange{
+    tr{
+        td{
+            &:nth-child(3){
+                text-align:left;
+            }
+        }
+    }
+
+}
+
+.vehSheet{
+    tr{
+        td{
+            &:nth-child(3){
+                text-align:left;
+            }
+        }
+        td{
+            &:nth-child(4){
+                text-align:left;
+            }
+        }
+    }
+}
+
+.textTable {
+    tr {
+        td {
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+}
+//由于方便多选框选择，采用左对齐方式
+.accTable,.roleTable{
+    tr{
+        td{
+            &:first-child{
+                text-align:left;
+            }
+        }
+    }
+}
+
+
+//搜索区带有 formitem的使用
+.gapnormal {
+    padding: 12px 12px 7px 12px;
+}
+//搜索区带有没有formitem的使用
+.gapunusual{
+    padding: 12px;
+}
+a.delete{
+    color:#F18F68;
+    &:hover{
+        color:#F18F68;
+    }
+}
+
+//按钮
+.btnBlue{
+    margin-left: 8px;
+    background: #49BCCE;
+    line-height: 32px;
+    color: #FFF;
+    display: inline-block;
+    border-radius: 3px;
+    width: 102px;
+    text-align: center;
+}
+.btnBlue:hover,.btnBlue:focus,.btnBlue:active{
+    background:#2691A1;
+    color:#FFF;
+}
+//播放
+.play{
+    position: relative;
+    display: block;
+    padding: 12px;
+    a{
+        font-size: 48px;
+        color: #FFF;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 50px;
+    }
+}
+.playtext{
+    text-align: left;
+    height: 150px;
+    .title{
+        font-size: 14px;
+        span{
+            color: #49BCCE;
+            float: right;
+            margin-right: 10px;
+        }
+        a{
+            color: #000;
+        }
+    }
+    .content{
+        line-height: 25px;
+        font-size: 12px;
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .time{
+        line-height: 25px;
+        font-size: 12px;
+        height: 25px;
+        span{float: right;}
+    }
+}
+.textoverflow{
+    display: block;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pr8{
+    padding-right:8px;
+}
+.iconSelf{
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 3px;
+    right: 5px;
+    display: inline-block;
+}
+//纠错框qualitybox左边箭头
+.qualitybox,{
+    border: 1px solid #ff5900;
+    border-radius:2px;
+    font-size: 12px;
+    color: #ff5900;
+    position: relative;
+    background-color: #FFF;
+    margin-left: 12px;
+}
+
+.qualitybox:before,.qualitybox:after,{
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+.qualitybox:before{
+    border-width: 4px;
+    border-right-color: #ff5900;
+    left: -9px;
+    top: 3px;
+}
+.qualitybox:after{
+    border-width: 4px;
+    border-right-color: #FFF;
+    left: -8px;
+    top: 3px;
+}

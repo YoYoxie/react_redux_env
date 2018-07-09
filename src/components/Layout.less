@@ -1,0 +1,103 @@
+.layoutaside {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    .layoutmain {
+        margin-left: 220px;
+        transition: all .3s ease;
+        .layoutheader {
+            height: 50px;
+            background: #FFF;
+            text-align: right;
+            box-shadow: 2px 0 6px 0 rgba(0,21,41,0.25);
+            .headermenu {
+                border: 0;
+                background: #FFF;
+                > li {
+                    float: right;
+                }
+            }
+        }
+        .layoutcontainer {
+            margin: 0;
+            .layoutbreadcrumb {
+                margin: 0 0 6px 0;
+            }
+            .layoutcontent {
+                position: absolute;
+                overflow: auto;
+                height: calc(~"100% - 94px");
+                width: calc(~"100% - 220px");
+                //padding: 8px;
+            }
+        }
+    }
+    .layoutview{
+        margin-left: 60px;
+        transition: all .3s ease;
+        .layoutheader {
+            height: 50px;
+            background: #FFF;
+            text-align: right;
+            box-shadow: 2px 0 6px 0 rgba(0,21,41,0.25);
+            .headermenu {
+                border: 0;
+                background: #FFF;
+                > li {
+                    float: right;
+                }
+            }
+        }
+        .layoutcontainer {
+            margin: 0;
+            .layoutbreadcrumb {
+                margin: 0 0 6px 0;
+            }
+            .layoutcontent {
+                position: absolute;
+                overflow: auto;
+                height: calc(~"100% - 94px");
+                width: calc(~"100% - 60px");
+                //padding: 8px;
+            }
+        }
+    }
+}
+
+.normal {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.head {
+    margin-bottom: 20px;
+    padding: 8px;
+    height: 80px;
+    color: #fff;
+    background: cadetblue;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.side {
+    margin-right: 20px;
+    padding: 8px;
+    width: 20%;
+    min-width: 200px;
+    background: #fafafa;
+}
+
+.main {
+    padding: 8px;
+    flex: 1 0 auto;
+}
+
+.foot {
+    margin-top: 20px;
+    padding: 8px;
+    background: greenyellow;
+}
