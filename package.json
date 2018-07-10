@@ -66,8 +66,10 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "node scripts/start.js development",
+    "buildProd": "node scripts/build.js production",
+    "startProd": "node scripts/start.js production",
+    "buildDev": "node scripts/build.js development",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -113,7 +115,8 @@
       [
         "import",
         {
-          "libraryName": "antd", "style": "css"
+          "libraryName": "antd",
+          "style": "css"
         }
       ]
     ]

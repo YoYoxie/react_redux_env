@@ -58,7 +58,7 @@ class ModelDetail extends React.Component {
     // 更改编辑状态
     changeStatus(name,data,index,boolean){
         data[index].edit = boolean;
-        this.setState(this.state[name]:data)
+        this.setState(this.state[name]=data)
     }
     save(data){
         this.props.conconfigupdate(data);

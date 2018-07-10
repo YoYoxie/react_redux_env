@@ -17,8 +17,6 @@ const API = {
     USER: URL + '/user',
     USERS_LIST: URL + '/users/',
     USERS_BUSINESS: URL + '/business_users',
-    /*车型库列表*/
-    VEHICLE: URL + '/vehicle',
     /*版本列表*/
     VERSION_LIST: URL + '/vehicleVersion',
     /*车型基础库列表*/

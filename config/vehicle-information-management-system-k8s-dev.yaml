@@ -1,0 +1,55 @@
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: dev
+  name: vehicle-information-management-system
+  annotations:
+    #nginx.org/client_max_body_size: 100m
+    ingress.kubernetes.io/proxy-body-size: 100m
+spec:
+  rules:
+  - host: vehicle-information-management-system-dev.cdd.group
+    http:
+      paths:
+      - backend:
+          serviceName: vehicle-information-management-system
+          servicePort: 80
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+ name: vehicle-information-management-system
+ namespace: dev
+ labels:
+  name: vehicle-information-management-system
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+   app: vehicle-information-management-system
+ strategy:
+  type: Recreate
+ template:
+  metadata:
+   labels:
+    app: vehicle-information-management-system
+  spec:
+   containers:
+   - name: vehicle-information-management-system
+     image: harbor.cdd.group/frontend/vehicle-information-management-system:0.0.3
+     imagePullPolicy: Always
+     ports:
+     - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+ namespace: dev
+ name: vehicle-information-management-system
+spec:
+ ports:
+ - port: 80
+   targetPort: 80
+ selector:
+  app: vehicle-information-management-system
